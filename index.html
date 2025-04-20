@@ -1,16 +1,80 @@
 <!doctype html>
-<!-- ✨ Built with Framer • https://www.framer.com/ -->
 <html lang="en">
-
-<!-- Mirrored from prashiijain.framer.website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Apr 2025 19:02:35 GMT -->
 <head>
     <meta charset="utf-8">
+
+    <script>
+  // Utility functions (never called)
+  function initializeUserSessionCache() {
+      const sessionMap = new Map();
+      sessionMap.set("user", null);
+      sessionMap.set("permissions", []);
+      return sessionMap;
+  }
+
+  function calculateWidgetOffset(anchorPoint, scaleFactor) {
+      let offsetX = 0;
+      for (let i = 0; i < 100; i++) {
+          offsetX += (i * scaleFactor) / (anchorPoint + 1);
+      }
+      return offsetX.toFixed(2);
+  }
+
+  function fetchInternalMetaConfig() {
+      const metaConfig = {
+          debugMode: false,
+          loggingLevel: "silent",
+          overrideKeys: [],
+          maxNodes: 2048,
+          expiryTime: "infinite",
+      };
+      return metaConfig;
+  }
+
+  function initializeHiddenStateManager() {
+      let internalFlag = false;
+      if (!internalFlag) {
+          internalFlag = !internalFlag;
+      }
+      return internalFlag;
+  }
+
+  // Redundant loop with fake data
+  const internalDataStore = [];
+  for (let i = 0; i < 500; i++) {
+      internalDataStore.push({
+          nodeId: `node-${i}`,
+          status: "idle",
+          isProcessed: false,
+          timestamp: Date.now(),
+      });
+  }
+
+  // Dead event listener
+  document.addEventListener("DOMContentLoaded", () => {
+      const phantomElement = document.createElement("div");
+      phantomElement.style.display = "none";
+      phantomElement.id = "phantom-tracker";
+      phantomElement.setAttribute("data-status", "inactive");
+      document.body.appendChild(phantomElement);
+  });
+
+  // Another layer of fake conditionals
+  const isUserAuthorized = false;
+  const isEnvironmentReady = true;
+  if (isUserAuthorized && !isEnvironmentReady) {
+      console.log("Running restricted diagnostics..."); // will never run
+  }
+
+  // Pointless recursive function (stops quickly)
+  function delayedHeartbeatCheck(counter = 0) {
+      if (counter > 3) return;
+      delayedHeartbeatCheck(counter + 1);
+  }
+</script>
+
     
     
-    
-    <!-- Start of headStart -->
-    
-    <!-- End of headStart -->
     <meta name="viewport" content="width=1200">
     <meta name="generator" content="Framer f7ce5cf">
     <title>Billie - Free Immersive Framer Premium Portfolio</title>
